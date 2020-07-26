@@ -8,7 +8,6 @@ module top_module(
     wire [15:0] first_sum, second_sum;
 
     add16 first_16( .a(a[15:0]), .b(b[15:0]), .cin(0), .sum(first_sum), .cout(first_cout) );
-    
     add16 second_16( .a(a[31:16]), .b(b[31:16]), .cin(first_cout), .sum(second_sum), .cout(second_cout) );
     
     assign sum[15:0] = first_sum;
